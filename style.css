@@ -1,0 +1,128 @@
+* {
+  margin: 0;
+  font-family: "Patrick Hand", cursive;
+  text-decoration: none;
+  color: white;
+}
+
+body {
+  background: #00a8ff;
+  height: 200vh;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  padding: 2px;
+  height: 80px;
+  position: sticky;
+  top: 0;
+  animation-duration: 0.8s;
+  animation-fill-mode: forwards;
+}
+
+.nav ul {
+  flex: 5;
+  list-style: none;
+  display: flex;
+}
+.nav ul > li {
+  line-height: 50px;
+  margin-right: 20px;
+  color: #353b48;
+  font-size: 23px;
+  font-weight: 200;
+  cursor: pointer;
+  transition: all 1s;
+}
+
+.nav ul > li:hover,
+.nav ul .active {
+  color: #e84118;
+}
+.nav .logo a {
+  margin-right: 30px;
+  font-size: 35px;
+  color: black;
+}
+.nav .search {
+  flex: 2;
+
+  display: flex;
+  justify-content: flex-end;
+  align-content: center;
+}
+.nav .container {
+  overflow: hidden;
+  height: 40px;
+  padding: 10px;
+  border-radius: 30px;
+  transition: all 0.5s;
+}
+.nav .container:hover {
+  background: #dff9fb;
+}
+.nav .container:hover .btn-input {
+  width: 200px;
+}
+.nav .search .btn-input {
+  float: left;
+  line-height: 40px;
+  width: 0;
+  color: black;
+  background: transparent;
+  border: none;
+  outline-style: none;
+  transition: all 0.5s;
+}
+.nav .search .btn-input::placeholder {
+  color: black;
+}
+.nav .container:hover .in-btn {
+  background: #e84118;
+  transform: rotate(360deg);
+}
+.nav .search .in-btn {
+  float: right;
+  background: #353b48;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  transition: all 0.7s;
+}
+.content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+}
+@keyframes background1 {
+  0% {
+    background: transparent;
+  }
+  55% {
+    background: white;
+    opacity: 0.5;
+  }
+  100% {
+    background: white;
+    box-shadow: 2px 3px 5px gray;
+  }
+}
+@keyframes background2 {
+  0% {
+    background: white;
+  }
+
+  55% {
+    background: white;
+    opacity: 0.5;
+  }
+
+  100% {
+    background: transparent;
+  }
+}
